@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS</title>
+<script type="text/javascript">
+
+var text,reverse;
+function palindrome(){
+	text = document.getElementById("text").value;
+	console.log("text = "+ text);
+	reverse = ((text.split('')).reverse()).join('');
+	console.log("reverse = "+ reverse);
+	if(text==reverse)
+		alert("IS A PALINDROME");
+	else
+		alert("IS NOT A PALINDROME");
+}
+
+</script>
+</head>
+<body>
+
+<form>	 
+	<input type="text" name="text" id="text">
+	 <input type="button" id="button" value="Button" onclick="palindrome()"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS</title>
+
+<script type="text/javascript">
+
+function SI()
+{
+	var principle=null,rate=null,time=null;
+
+	while(true){
+		principle = prompt("Please enter Principle");
+		if(isNaN(principle) || parseInt(principle)<=0)
+			alert("Enter a positive numeric value only");
+		else
+			break;
+	}
+	while(true){
+		rate = prompt("Please enter Rate");
+		if(isNaN(rate) || parseInt(rate)<=0)
+			alert("Enter a positive numeric value only");
+		else 
+			break;
+	}
+
+	while(true){
+		time = prompt("Please enter Time");
+		if(isNaN(time) || parseInt(time)<=0)
+			alert("Enter a positive numeric value only");
+		else 
+			break;
+	}
+	var Simple =( principle*rate*time)/100;
+	
+	var text=document.getElementById("textid");
+    text.innerHTML="Simple Interest (calculated anually) is: "+Simple;
+}
+</script>
+
+</head>
+<body>
+	 <input type="button" id="button" value="calculate simple interest" onclick="SI()"/>
+	 <p id="textid" ></p>
+</body>
+</html>
